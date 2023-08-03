@@ -1,7 +1,7 @@
 //your parameter variables go here!
 let pinkColour= true
 
-let circleSize=(100)
+let circleSize=(110)
 let McircleSize=(30)
 let ScircleSize=(10)
 
@@ -11,16 +11,16 @@ let maincircleY=50
 let topLeftcircleX=10
 let topLeftcircleY=5
 
-let truemiddlecircleX=150
-let truemiddlecircleY=150
+let truemiddlecircleX=100
+let truemiddlecircleY=100
 
 let middleleftcircleX=10
-let middleleftcircleY=50
+let middleleftcircleY=100
 
 let bottomleftcircleX=5
 let bottomleftcircleY=150
 
-let bottommiddlecircleX=40
+let bottommiddlecircleX=100
 let bottommiddlecircleY=180
 
 let toprightcircleX=180
@@ -32,12 +32,11 @@ let bottomrightcircleY=185
 let middlerightcircleX=170
 let middlerightcircleY=90
 
-let topmiddlecircleX= 50
+let topmiddlecircleX= 100
 let topmiddlecircleY= 10
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GLIDE_WALLPAPER);
- // pWallpaper.output_mode(DEVELOP_GLYPH);
   pWallpaper.resolution(NINE_PORTRAIT);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
@@ -87,10 +86,10 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 }
 
   function drawMainCircle(){
-    ellipse(maincircleX,maincircleY,circleSize)//top left circle
-    ellipse(maincircleX+100,maincircleY,circleSize)//top right circle 
-    ellipse(maincircleX+50,maincircleY+50,circleSize)//bottom left circle
-    ellipse(maincircleX,maincircleY+100,circleSize)//bottom right circle
+    ellipse(maincircleX,maincircleY,circleSize)//top left circle + star's main circle 
+    ellipse(maincircleX+100,maincircleY,circleSize)//top right circle +star
+    ellipse(maincircleX,maincircleY+100,circleSize)//bottom left circle + star's bottom left 
+    ellipse(maincircleX+100,maincircleY+100,circleSize)//bottom right circle + star's bottom right
   }
 
   function drawMedCircle(){
@@ -119,4 +118,3 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     ellipse(bottommiddlecircleX+10,bottommiddlecircleY-5,ScircleSize+5)//bottom middle small right circle
     ellipse(bottommiddlecircleX-5,bottommiddlecircleY-7,ScircleSize)//bottom middle small top circle
   }
-
